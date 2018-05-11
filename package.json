@@ -1,0 +1,22 @@
+{
+  "name": "zh-converter",
+  "version": "1.0.0",
+  "description": "Simplified Chinese <-> Traditional Chinese ",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/a26007565/zh-converter.git"
+  },
+  "author": "weiting",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/a26007565/zh-converter/issues"
+  },
+  "homepage": "https://github.com/a26007565/zh-converter#readme",
+  "dependencies": {
+    "chinese-conv": "^1.0.1"
+  }
+}
