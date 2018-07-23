@@ -12,19 +12,22 @@ Options:
   -h, --help                    Display this information.
   -t, --traditional             Convert to traditional chinese.
   -s, --simplified              Convert to traditional chinese.
+  -p <PATH>                     Set path.
 `;
 
 for (let i = 0; i < args.length; i++) {
   let arg = args[i];
-  if (arg === "--help" || arg === "-h") {
+  if (arg === '--help' || arg === '-h') {
     console.log(help_page);
     process.exit();
-  } else if (arg === "--traditional" || arg === "-t") {
+  } else if (arg === '--traditional' || arg === '-t') {
     console.log(`converting to traditional chinese...\r\n`);
     isTraditional = true;
-  } else if (arg === "--simplified" || arg === "-s") {
+  } else if (arg === '--simplified' || arg === '-s') {
     console.log(`converting to simplified chinese...\r\n`);
     isTraditional = false;
+  } else if (arg === '-p' && args[i + 1]) {
+    process.chdir(args[++i])
   } else {
     console.log(help_page);
     throw new Error(`invalid command line argument ${arg}`);
