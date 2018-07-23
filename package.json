@@ -6,6 +6,9 @@
   "scripts": {
     "start": "node index.js"
   },
+  "bin": {
+    "zh-converter": "index.js"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/a26007565/zh-converter.git"
