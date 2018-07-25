@@ -1,6 +1,6 @@
 {
   "name": "zh-converter",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "Simplified Chinese <-> Traditional Chinese ",
   "main": "index.js",
   "scripts": {
@@ -19,6 +19,10 @@
     "url": "https://github.com/a26007565/zh-converter/issues"
   },
   "homepage": "https://github.com/a26007565/zh-converter#readme",
+  "keywords": [
+    "Language",
+    "zh"
+  ],
   "dependencies": {
     "chinese-conv": "^1.0.1"
   }
