@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
-    "test": "mocha"
+    "test": "istanbul cover _mocha"
   },
   "bin": {
     "zh-converter": "index.js"
@@ -28,6 +28,7 @@
     "chinese-conv": "^1.0.1"
   },
   "devDependencies": {
+    "istanbul": "^1.1.0-alpha.1",
     "mocha": "^5.2.0",
     "should": "^13.2.1"
   }
