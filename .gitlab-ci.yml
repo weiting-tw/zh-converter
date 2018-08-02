@@ -1,12 +1,32 @@
 image: node:8
 
+stages:
+  - test
+  - deploy
+
 before_script:
   - npm install
 
 test:
   script:
   - npm test
+  artifacts:
+    paths:
+      - coverage/
 
 cache:
   paths:
-  - node_modules/
+    - node_modules/
+
+pages:
+  stage: deploy
+  dependencies:
+    - test
+  script:
+    - mv coverage/lcov-report/ public/
+  artifacts:
+    paths:
+      - public
+    expire_in: 30 days
+  only:
+    - master

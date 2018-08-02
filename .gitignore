@@ -2,3 +2,5 @@
 node_modules/
 # coverage folder
 coverage/
+# gitlab public folder
+public/
