@@ -13,18 +13,18 @@ exports.run = (process, toTraditional = true, filterExtname = '') => {
   });
 }
 
-exports.convertFile = async (file, toTraditional) => {
+exports.convertFile = async (file, toTraditional, callback) => {
   fs.readFile(file, 'utf-8', async (err, data) => {
     try {
       await fs.writeFile(
         file,
         toTraditional ? chineseConv.tify(data) : chineseConv.sify(data),
-        (err) => {
-          if (err) throw err;
+        () => {
           console.log(`%s ${file} be converted! success.`, "\x1b[37m");
         });
     } catch (error) {
       console.log(`%s ${file} be converted fail !`, "\x1b[31m");
+      callback(`${file} be converted fail !`);
     }
   });
 }
