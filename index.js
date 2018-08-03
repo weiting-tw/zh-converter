@@ -1,4 +1,5 @@
 #!/usr/bin/env node
+
 const converter = require('./zh-converter');
 
 const args = process.argv.slice(2);
@@ -12,9 +13,11 @@ Options:
 -t, --traditional             Convert to traditional chinese.
 -s, --simplified              Convert to traditional chinese.
 -p <PATH>                     Set path.
+-e, --extname                 filter extension name, ex. .json .txt
 `;
 
 let toTraditional = true;
+let filterExtname = '';
 
 for (let i = 0; i < args.length; i++) {
   let arg = args[i];
@@ -29,10 +32,12 @@ for (let i = 0; i < args.length; i++) {
     toTraditional = false;
   } else if (arg === '-p' && args[i + 1]) {
     process.chdir(args[++i])
+  } else if (arg === '--extname' || arg === '-e') {
+    filterExtname = args[++i];
   } else {
     console.log(help_page);
     throw new Error(`invalid command line argument ${arg}`);
   }
 }
 
-converter.run(process, toTraditional);
+converter.run(process, toTraditional, filterExtname);

@@ -2,10 +2,11 @@ const fs = require('fs');
 const path = require('path');
 const chineseConv = require('chinese-conv');
 
-exports.run = (process, toTraditional = true) => {
+exports.run = (process, toTraditional = true, filterExtname = '') => {
   fs.readdir(process.cwd(), (err, data) => {
     data.filter((file) => {
-      return path.extname(file) === '.json';
+      if (filterExtname === '' || filterExtname === '*') return true;
+      return path.extname(file) === filterExtname;
     }).map(async (file) => {
       await this.convertFile(file, toTraditional);
     });
@@ -14,12 +15,16 @@ exports.run = (process, toTraditional = true) => {
 
 exports.convertFile = async (file, toTraditional) => {
   fs.readFile(file, 'utf-8', async (err, data) => {
-    await fs.writeFile(
-      file,
-      toTraditional ? chineseConv.tify(data) : chineseConv.sify(data),
-      (err) => {
-        if (err) throw err;
-        console.log(`${file} be converted!`);
-      });
+    try {
+      await fs.writeFile(
+        file,
+        toTraditional ? chineseConv.tify(data) : chineseConv.sify(data),
+        (err) => {
+          if (err) throw err;
+          console.log(`%s ${file} be converted! success.`, "\x1b[37m");
+        });
+    } catch (error) {
+      console.log(`%s ${file} be converted fail !`, "\x1b[31m");
+    }
   });
 }

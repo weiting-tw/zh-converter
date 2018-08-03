@@ -9,7 +9,7 @@
             "request": "launch",
             "name": "launch",
             "program": "${workspaceFolder}/index.js",
-            "args": ["-t"],
+            "args": ["-t", "-e", ".yml"],
             "cwd": "${workspaceRoot}",
             "protocol": "inspector"
         }
