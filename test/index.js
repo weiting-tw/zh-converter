@@ -7,6 +7,7 @@ describe('test - convert', () => {
   it('convert to traditional chinese', done => {
     convert.convertFile('./test2TW.json', true).then(() => {
       expect(fs.readFileSync('./test2TW.json', 'utf-8')).to.equal('{\n  "text": "我有一隻小毛驢，我從來也不騎，有一天我心血來潮騎著去趕集，我手裡拿著小皮鞭我心裡真得意，不知怎麼譁啦啦啦我摔了一身泥"\n}');
+      done();
     }).catch((err) => {
       done();
     }).catch(done);
@@ -15,6 +16,7 @@ describe('test - convert', () => {
   it('convert to simplified chinese', done => {
     convert.convertFile('./test2CN.json', false).then(() => {
       expect(fs.readFileSync('./test2CN.json', 'utf-8')).to.equal('{\n  "text": "我有一只小毛驢，我從來也不騎，有一天我心血來潮騎著去趕集，我手裡拿著小皮鞭我心裡真得意，不知怎麼譁啦啦啦我摔了一身泥"\n}');
+      done();
     }).catch((err) => {
       done();
     }).catch(done);

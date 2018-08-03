@@ -36,7 +36,6 @@ for (let i = 0; i < args.length; i++) {
     filterExtname = args[++i];
   } else {
     console.log(help_page);
-    throw new Error(`invalid command line argument ${arg}`);
   }
 }
 
