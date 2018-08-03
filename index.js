@@ -4,14 +4,14 @@ const converter = require('./zh-converter');
 
 const args = process.argv.slice(2);
 const help_page = `
-zh-converter
+Usage: zh-converter [options]
+Conversion Simplified Chinese <-> Traditional Chinese.
 https://github.com/a26007565/zh-converter
 
-Usage: zh-converter <command>
 Options:
 -h, --help                    Display this information.
 -t, --traditional             Convert to traditional chinese.
--s, --simplified              Convert to traditional chinese.
+-s, --simplified              Convert to simplified chinese.
 -p <PATH>                     Set path.
 -e, --extname                 filter extension name, ex. .json .txt
 `;

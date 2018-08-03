@@ -1,7 +1,7 @@
 {
   "name": "zh-converter",
-  "version": "1.0.3",
-  "description": "Simplified Chinese <-> Traditional Chinese ",
+  "version": "1.1.0",
+  "description": "Conversion Simplified Chinese <-> Traditional Chinese.",
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
@@ -21,8 +21,14 @@
   },
   "homepage": "https://github.com/a26007565/zh-converter#readme",
   "keywords": [
+    "conversion",
+    "convert",
+    "transform",
+    "Chinese",
     "Language",
-    "zh"
+    "Language transform",
+    "Simplified",
+    "Traditional"
   ],
   "dependencies": {
     "chinese-conv": "^1.0.1"
