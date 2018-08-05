@@ -19,11 +19,12 @@ npm install -g zh-converter
 Usage: zh-converter [options]
 
 Options:
--h, --help                    Display this information.
--t, --traditional             Convert to traditional chinese.
--s, --simplified              Convert to simplified chinese.
--p <PATH>                     Set path.
--e, --extname                 filter extension name, ex. .json .txt
+-V, --version         output the version number
+-t, --traditional     Convert to traditional chinese.
+-s, --simplified      Convert to simplified chinese.
+-p, --path [PATH]     Set path.
+-e, --extname [type]  filter extension name, ex. .json .txt (default: )
+-h, --help            output usage information
 ```
 
 ## Related
