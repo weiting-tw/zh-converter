@@ -24,7 +24,8 @@ exports.convertFile = async (file, toTraditional, callback) => {
         });
     } catch (error) {
       console.log(`%s ${file} be converted fail !`, "\x1b[31m");
-      callback(`${file} be converted fail !`);
+      if (callback)
+        callback(`${file} be converted fail !`);
     }
   });
 }
