@@ -31,7 +31,8 @@
     "Traditional"
   ],
   "dependencies": {
-    "chinese-conv": "^1.0.1"
+    "chinese-conv": "^1.0.1",
+    "commander": "^2.17.0"
   },
   "devDependencies": {
     "chai": "^4.1.2",
