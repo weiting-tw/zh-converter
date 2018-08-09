@@ -1,6 +1,6 @@
 # zh-converter
 
-[![pipeline status](https://gitlab.com/a26007565/zh-converter/badges/master/pipeline.svg)](https://gitlab.com/a26007565/zh-converter/commits/master) [![coverage report](https://gitlab.com/a26007565/zh-converter/badges/master/coverage.svg)](https://gitlab.com/a26007565/zh-converter/commits/master) [![BCH compliance](https://bettercodehub.com/edge/badge/a26007565/zh-converter?branch=master)](https://bettercodehub.com/)
+[![GitHub](https://img.shields.io/github/license/mashape/apistatus.svg)](LICENSE) [![npm (scoped)](https://img.shields.io/npm/v/zh-converter.svg)](https://www.npmjs.com/package/zh-converter) [![pipeline status](https://gitlab.com/a26007565/zh-converter/badges/master/pipeline.svg)](https://gitlab.com/a26007565/zh-converter/pipelines) [![coverage report](https://gitlab.com/a26007565/zh-converter/badges/master/coverage.svg)](https://a26007565.gitlab.io/zh-converter/) [![BCH compliance](https://bettercodehub.com/edge/badge/a26007565/zh-converter?branch=master)](https://bettercodehub.com/)
 
 ## About
 
@@ -30,9 +30,5 @@ Options:
 ## Related
 
 - [chinese-conv][chinese-conv]
-
-## License
-
-[MIT](LICENSE)
 
 [chinese-conv]: https://github.com/Pleasurazy/chinese-conv
