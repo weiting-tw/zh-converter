@@ -23,10 +23,8 @@ let filterExtname = '' || program.extname;
 
 if (toTraditional) {
   console.log(`converting to traditional chinese...\r\n`);
-  toTraditional = true;
 } else {
   console.log(`converting to simplified chinese...\r\n`);
-  toTraditional = false;
 }
 if (program.path) {
   process.chdir(program.path)
