@@ -1,6 +1,6 @@
 {
   "name": "zh-converter",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "Conversion Simplified Chinese <-> Traditional Chinese.",
   "main": "index.js",
   "scripts": {
@@ -32,11 +32,12 @@
   ],
   "dependencies": {
     "chinese-conv": "^1.0.1",
-    "commander": "^2.17.0"
+    "commander": "^2.19.0"
   },
   "devDependencies": {
-    "chai": "^4.1.2",
+    "chai": "^4.2.0",
     "istanbul": "^1.1.0-alpha.1",
+    "lodash": "^4.17.11",
     "mocha": "^5.2.0"
   }
 }
