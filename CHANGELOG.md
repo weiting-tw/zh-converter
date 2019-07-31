@@ -4,7 +4,9 @@
 
 ### Commits
 
+- Add CHANGELOG.md [`b5415d9`](https://github.com/a26007565/zh-converter/commit/b5415d97a75781b58e39eeb5c583cfa2ee0af452)
 - Revert test resource [`ac63fc1`](https://github.com/a26007565/zh-converter/commit/ac63fc12ab9a69b9182c9af42a27aafc1fe115dd)
+- Update README [`f834c4c`](https://github.com/a26007565/zh-converter/commit/f834c4cb871d89e3e1fe8b057b985a49c8d1745a)
 
 ## [v1.1.3](https://github.com/a26007565/zh-converter/compare/v1.1.1...v1.1.3) - 2019-07-31
 
