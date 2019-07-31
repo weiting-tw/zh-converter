@@ -44,11 +44,6 @@
     "release-it": "12.3.4"
   },
   "release-it": {
-    "hooks": {
-      "after:init": [
-        "npm test"
-      ]
-    },
     "github": {
       "releaseName": "v${version}"
     },
