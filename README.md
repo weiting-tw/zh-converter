@@ -27,6 +27,10 @@ Options:
 -h, --help            output usage information
 ```
 
+## Changelog
+
+See [Changelog](CHANGELOG.md) for more detail
+
 ## Related
 
 - [chinese-conv][chinese-conv]
