@@ -56,9 +56,10 @@
       "releaseName": "v${version}"
     },
     "git": {
+      "changelog": "npx auto-changelog --stdout --commit-limit false -u --template ./changelog.hbs ",
       "commitMessage": "Release v${version}",
       "tagName": "v${version}",
-      "pushRepo": "git@github.com:a26007565/zh-converter.git"
+      "pushRepo": "origin"
     }
   }
 }
