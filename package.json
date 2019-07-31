@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
-    "test": "istanbul cover _mocha"
+    "test": "istanbul cover _mocha",
+    "release": "release-it --ci",
+    "changelog": "npx auto-changelog -p && git add CHANGELOG.md"
   },
   "bin": {
     "zh-converter": "index.js"
@@ -56,5 +58,11 @@
       "tagName": "v${version}",
       "pushRepo": "origin"
     }
+  },
+  "auto-changelog": {
+    "output": "CHANGELOG.md",
+    "template": "changelog.hbs",
+    "unreleased": true,
+    "commitLimit": false
   }
 }
