@@ -12,7 +12,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/a26007565/zh-converter.git"
+    "url": "https://github.com/a26007565/zh-converter.git"
   },
   "author": "weiting",
   "license": "MIT",
@@ -40,6 +40,23 @@
     "istanbul": "1.1.0-alpha.1",
     "js-yaml": "3.13.1",
     "lodash": "4.17.15",
-    "mocha": "5.2.0"
+    "mocha": "5.2.0",
+    "release-it": "12.3.4"
+  },
+  "release-it": {
+    "hooks": {
+      "after:init": [ "npm test"]
+    },
+    "github": {
+      "releaseName": "v${version}"
+    },
+    "gitlab": {
+      "releaseName": "v${version}"
+    },
+    "git": {
+      "commitMessage": "Release v${version}",
+      "tagName": "v${version}",
+      "pushRepo": "git@github.com:a26007565/zh-converter.git"
+    }
   }
 }
