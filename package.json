@@ -34,7 +34,7 @@
   ],
   "dependencies": {
     "chinese-conv": "^1.0.1",
-    "commander": "^2.19.0"
+    "commander": "^3.0.0"
   },
   "devDependencies": {
     "chai": "4.2.0",
