@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
-    "test": "istanbul cover _mocha",
+    "test": "istanbul cover _mocha test -- --reporter mocha-junit-reporter",
     "release": "release-it --ci",
     "changelog": "npx auto-changelog -p && git add CHANGELOG.md"
   },
@@ -43,6 +43,7 @@
     "js-yaml": "3.13.1",
     "lodash": "4.17.15",
     "mocha": "5.2.0",
+    "mocha-junit-reporter": "^1.23.3",
     "release-it": "12.3.4"
   },
   "release-it": {
