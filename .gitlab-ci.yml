@@ -4,12 +4,19 @@ stages:
   - test
   - deploy
 
-before_script:
-  - npm install
+include:
+  - template: Code-Quality.gitlab-ci.yml
+
+code_quality:
+  artifacts:
+    paths: [gl-code-quality-report.json]
 
 test:
   script:
+  - npm install
   - npm test
+  cache:
+    policy: pull
   artifacts:
     paths:
       - coverage/
@@ -17,8 +24,10 @@ test:
       junit:
         - '*/test-results.xml'
 
-
 cache:
+  key: 
+    files:
+      - package-lock.json
   paths:
     - node_modules/
 
@@ -28,6 +37,8 @@ pages:
     - test
   script:
     - mv coverage/lcov-report/ public/
+  cache:
+    policy: pull
   artifacts:
     paths:
       - public
