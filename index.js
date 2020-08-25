@@ -15,10 +15,10 @@ program
 
 if (!process.argv.slice(2).length) {
   program.outputHelp();
-  process.exit();
+  throw new Error('argument is empty');
 }
 
-let toTraditional = !!!program.simplified;
+let toTraditional = !program.simplified;
 let filterExtname = '' || program.extname;
 
 if (toTraditional) {
