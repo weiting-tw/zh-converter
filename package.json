@@ -43,7 +43,7 @@
     "js-yaml": "3.13.1",
     "lodash": "4.17.19",
     "mocha": "5.2.0",
-    "mocha-junit-reporter": "^1.23.3",
+    "mocha-junit-reporter": "^2.0.0",
     "release-it": "12.3.4"
   },
   "release-it": {
