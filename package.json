@@ -33,7 +33,7 @@
     "Traditional"
   ],
   "dependencies": {
-    "chinese-conv": "^1.0.1",
+    "chinese-conv": "^4.0.0",
     "commander": "^2.19.0"
   },
   "devDependencies": {
